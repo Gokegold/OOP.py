@@ -1,3 +1,25 @@
+"""
+Create Instance Variables
+
+Ways to Access Instance Variable
+
+Instance Variables Naming Conventions
+
+Dynamically Adding Instance Variable to Object
+
+Dynamically Delete Instance Variable
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: April 28, 2023
+
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 12, 2023]
+
+"""
+
+
 # classmethod and staticmethod
 
 # Functions and arguments
