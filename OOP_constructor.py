@@ -145,7 +145,103 @@ s1.show()
         Python will provide a default constructor if no constructor is defined.
 """
 
+
 # TYPES OF CONSTRUCTORS
 # DEFAULT CONSTRUCTOR
-# PARAMETERIZED CONSTRUCTION
+# PARAMETERIZED CONSTRUCTION = def __init__(self):
+# Non-PARAMETERIZED CONSTRUCTION = def __init__(self, v1, v2..., vn):
 
+# DEFAULT CONSTRUCTOR
+"""
+    python will provide a default constructor if no constructor is defined.
+    Python adds a default constructor when we  do not include the  constructor in the class
+    or when w forget to declare created constructor(s)
+    no task are preformed object are only initialized.
+    BECAUSE: The construct is without a body hence it's empty and can not preform. 
+    It does not perform any task but initializes the objects.
+    It is an empty constructor without a body.
+    
+    Note:
+        The default constructor is not present in the source py file.
+        It is inserted into the code during compilation if not exists. See the below image.
+        If you implement your constructor, then the default constructor will not be added.
+"""
+
+
+class Employees:
+
+    def display(self):
+        print('Inside Display')
+
+
+emp = Employees()
+emp.display()
+
+
+# NON-PARAMETERIZED CONSTRUCTION
+"""
+    A constructor without any arguments is called a non-parameterized constructor.
+    This type of constructor is used to initialize each object with default values.
+
+    This constructor does not accept the arguments during object creation.
+    Instead, it initializes every object with the same set of values.
+"""
+
+
+# NON ARGUMENT CONSTRUCTOR
+class Company:
+
+    # no-argument constructor
+    def __init__(self):
+        self.name = "NATIVE"
+        self.address = "ABC Street"
+
+    # a method for printing data members
+    def show(self):
+        print('Name:', self.name, 'Address:', self.address)
+
+
+# creating object of the class
+cmp = Company()
+
+# calling the instance method using the object
+cmp.show()
+
+
+# PARAMETERIZED CONSTRUCTION
+"""
+    Parameterized Constructor
+        A constructor with defined parameters or arguments is called a parameterized constructor.
+        We can pass different values to each object at the time of creation using a parameterized constructor.
+        
+        The first parameter to constructor is self that is a reference to the being constructed,
+        and the rest of the arguments are provided by the programmer.
+        A parameterized constructor can have any number of arguments.
+        
+        For example, consider a company that contains thousands of employees.
+        In this case, while creating each employee object,
+        we need to pass a different name, age, and salary. In such cases,
+        use the parameterized constructor.
+"""
+
+
+class Employees:
+    # parameterized constructor
+    def __init__(self, name, age, salary):
+        # name is a parameter pass or the argument
+        # age is a parameter passed
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+    # display object
+    def shows(self):
+        print(self.name, self.age, self.salary)
+
+
+# creating object of the Employee class
+emma = Employees('Emma', 23, 7500)
+emma.shows()
+
+kelly = Employees('Kelly', 25, 8500)
+kelly.shows()
