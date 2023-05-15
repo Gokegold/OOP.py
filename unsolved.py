@@ -55,6 +55,29 @@ class NormalPressure:
 
     def normal(self):
         return f'Blood Pressure is {self}'
+    
+    
+    
+    #  BLOOD PRESSURE MOST RECENT
+    
+    class NormalPressure:
+    def __init__(self, f_nom, l_nom):
+        self.f_nom = f_nom
+        self.l_nom = l_nom
+
+    def n_diastolic(self, normal_diastolic):
+        return f"Diastolic Pressure is {self.f_nom, self.l_nom} is {normal_diastolic}"
+
+    def n_systolic(self, normal_systolic):
+        return f"Diastolic Pressure is {self.f_nom, self.l_nom} is {normal_systolic}"
+
+
+class CurrentPressure(NormalPressure):
+    def recent_systolic(self, normal_systolic=120):
+        return super().n_systolic(normal_systolic)
+
+    def recent_diastolic(self, normal_diastolic=80):
+        return super().n_diastolic(normal_diastolic)
 
 
 class CurrentPressure:
