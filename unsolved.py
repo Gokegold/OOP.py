@@ -1,4 +1,31 @@
-class Vehicle:
+"""
+Python crash course
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: April 28, 2023
+
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 14, 2023]
+[May 15, 2023]
+
+"""
+
+
+class Vehicle:"""
+Python crash course
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: April 28, 2023
+
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023]
+
+"""
+
     def __init__(self, name, max_speed, mileage):
         self.name = name
         self.max_speed = max_speed
