@@ -8,7 +8,7 @@ Github: https://www.github.com/Gokegold
 Date Created: April 28, 2023
 
 last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 14, 2023]
-[May 15, 2023]
+[May 15, 2023],[May 16, 2023]
 
 """
 
@@ -111,3 +111,22 @@ class CurrentPressure:
     def __init__(self, current_diastolic, current_systolic):
         self.current_diastolic = input("Enter a number: ")
         self.current_systolic = input("Enter a number: ")
+        
+        
+
+class BloodPressure:
+    nom_systolic = 120
+    nom_diastolic = 70
+    def __init__(self, user_systolic, user_diastolic):
+        user_systolic = input(int("Systolic Pressure: "))
+        user_diastolic = input(int("Diastolic Pressure"))
+    
+    def healthy(self):
+        if user_systolic == nom_systolic and user_diatolic == nom_diatolic
+        return f"User blood pressure is healthy"
+    def unhealthy(self):
+        if user_systolic <= nom_systolic or user_diatolic >= nom_diatolic
+        return f"User blood pressure is unhealthy"
+
+User = BloodPressure(
+    
