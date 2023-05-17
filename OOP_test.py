@@ -267,7 +267,8 @@ class Employee(Company):
 # Creating object of child class
 emp = Employee()
 emp.info()
-'''
+
+
 class Carriage:
     def carriage_info(self):
         print('Inside Carriage class')
@@ -341,3 +342,29 @@ print(Saloon.saloon_info(driver_1))
 print(' ')
 print(Saloon.saloon_info(driver_2))
 print(Car.car_info(two_doors))
+
+# QUESTION $
+
+"""
+        write the controller class for the following Blood Pressure Calculator,...
+        ...if you know the normal pressure is 120/80 
+        should any number go higher meaning pressure increased
+        and vice versa
+"""
+
+class BloodPressure:
+    def pressure(self, systolic_p, diastolic_p):
+        return f"{systolic_p}/{diastolic_p}"
+
+
+normal = BloodPressure()
+normal.systolic = 180
+normal.diastolic = 80
+print(f"Healthy Pressure is: {normal.systolic}/{normal.diastolic}")
+
+print("Enter Details")
+user = BloodPressure()
+user.systolic = input("Systolic: ")
+user.diastolic = input("Diastolic: ")
+print(f"Your Pressure is: {user.systolic}/{user.diastolic}")
+
