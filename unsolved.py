@@ -8,7 +8,7 @@ Github: https://www.github.com/Gokegold
 Date Created: April 28, 2023
 
 last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 14, 2023]
-[May 15, 2023],[May 16, 2023]
+[May 15, 2023],[May 16, 2023],[May 17, 2023]
 
 """
 
@@ -130,3 +130,34 @@ class BloodPressure:
 
 User = BloodPressure(
     
+class BloodPressure:
+    def __init__(self, norm_systolic=120, norm_diastolic=70):
+        self.norm_systolic = norm_systolic
+        self.norm_diastolic = norm_diastolic
+
+    def noms(self):
+        print("Healthy blood pressure")
+        return f"{self.norm_systolic}/{self.norm_diastolic}"
+
+class User:
+    def user(_systolic, _diastolic):
+        _systolic = None
+        _diastolic = None
+
+        if _systolic is None:
+            _systolic._get_input()
+        else:
+            if isinstance(_systolic, str):
+                _systolic = int(_systolic)
+
+                return f"{_systolic}"
+        
+        if _diastolic is None:
+            _diastolic._get_input()
+        else:
+            if isinstance(_diastolic, str):
+                _diastolic = int(_diastolic)
+
+                return f"{_diastolic}"
+
+User.user(180, 90)
