@@ -1,5 +1,5 @@
 """
-Python crash course
+Python OOP crash course
 
 Twitter @i_amgoke: https://twitter.com/i_amgoke
 
