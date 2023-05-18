@@ -8,7 +8,7 @@ Github: https://www.github.com/Gokegold
 Date Created: April 28, 2023
 
 last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 14, 2023]
-[May 15, 2023],[May 16, 2023],[May 17, 2023]
+[May 15, 2023],[May 16, 2023],[May 17, 2023],[May 18, 2023]
 
 """
 
@@ -161,3 +161,65 @@ class User:
                 return f"{_diastolic}"
 
 User.user(180, 90)
+    
+    
+    
+"""
+pressure
+"""
+    
+class BloodPressure:
+    def pressure(self, systolic_p, diastolic_p):
+        return f"{systolic_p}/{diastolic_p}"
+
+
+normal = BloodPressure()
+normal.systolic = 180
+normal.diastolic = 80
+print(f"Healthy Pressure is: {normal.systolic}/{normal.diastolic}")
+
+print("Enter Details")
+user = BloodPressure()
+user.systolic = input("Systolic: ")
+user.diastolic = input("Diastolic: ")
+print(f"Your Pressure is: {user.systolic}/{user.diastolic}")
+
+
+class Item:
+    def __init__(self, name, price, quantity):
+        print(f"An instance created: {name}")
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        # Above a dynamic attribute name has been assigned using self.name
+
+
+class BloodPressure:
+    def pressure(self, systolic_p, diastolic_p):
+        return f"{systolic_p}/{diastolic_p}"
+
+
+normal = BloodPressure()
+normal.systolic = 180
+normal.diastolic = 80
+print(f"Healthy Pressure is: {normal.systolic}/{normal.diastolic}")
+
+print("Enter Details")
+user = BloodPressure()
+user.systolic = input("Systolic: ")
+user.diastolic = input("Diastolic: ")
+print(f"Your Pressure is: {user.systolic}/{user.diastolic}")
+
+
+class Item:
+    def __init__(self, name, price, quantity):
+        print(f"An instance created: {name}")
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        # Above a dynamic attribute name has been assigned using self.name
+
+    def print_out(self, x, y):
+        return x * y
+
+ 
