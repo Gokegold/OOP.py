@@ -8,7 +8,7 @@ Github: https://www.github.com/Gokegold
 Date Created: April 28, 2023
 
 last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023],[May 14, 2023]
-[May 15, 2023],[May 16, 2023],[May 17, 2023],[May 18, 2023]
+[May 15, 2023],[May 16, 2023],[May 17, 2023],[May 18, 2023],[May 20, 2023]
 
 """
 
@@ -223,3 +223,21 @@ class Item:
         return x * y
 
  
+    
+    class CheckUp:
+    def __init__(self, name, systolic, diastolic):
+        print(f"An instance created: {name}")
+        self.name = name
+        self.systolic = systolic
+        self.diastolic = diastolic
+        # Above a dynamic attribute name has been assigned using self.name
+
+    def patient_pressure(self):
+        return f"{self.systolic}/{self.diastolic}"
+
+
+patient_1 = CheckUp("John", 180, 70)
+patient_2 = CheckUp("TOl", 182, 72)
+
+print(patient_2.patient_pressure())
+
