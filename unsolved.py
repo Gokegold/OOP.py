@@ -225,7 +225,7 @@ class Item:
  
     
     class CheckUp:
-    def __init__(self, name, systolic, diastolic):
+    def __init__(self, name: str, systolic: float, diastolic: float):
         print(f"An instance created: {name}")
         self.name = name
         self.systolic = systolic
