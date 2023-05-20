@@ -368,3 +368,26 @@ user.systolic = input("Systolic: ")
 user.diastolic = input("Diastolic: ")
 print(f"Your Pressure is: {user.systolic}/{user.diastolic}")
 
+
+class CheckUp:
+    healthy_systolic = 120
+    healthy_diastolic = 80
+
+    def __init__(self, name: str, systolic: float, diastolic: float):
+
+        assert diastolic >= 70
+        print(f"An instance created: {name}")
+        self.name = name
+        self.systolic = systolic
+        self.diastolic = diastolic
+        # Above a dynamic attribute name has been assigned using self.name
+
+    def patient_pressure(self):
+        return f"{self.systolic}/{self.diastolic}"
+
+
+patient_1 = CheckUp("John", 180, 70)
+patient_2 = CheckUp("TOl", 182, 72)
+
+print(patient_2.patient_pressure())
+
