@@ -7,7 +7,7 @@ Github: https://www.github.com/Gokegold
 
 Date Created: April 28, 2023
 
-last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023]
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023], [May 23, 2023]
 
 """
 
@@ -304,7 +304,9 @@ prod_2 = Truck(4, 4.5)
 
 class Saloon:
     def __init__(self, name, color):
-        self.name = name
+
+
+self.name = name
         self.color = color
 
     def saloon_info(self):
@@ -342,3 +344,47 @@ print(' ')
 print(Saloon.saloon_info(driver_2))
 print(Car.car_info(two_doors))
 
+class Item:
+    pay_rate = 0.8
+    all = []
+    def __init__(self, name: str, price: float, quantity=0):
+        # Run validation to the received argument
+        assert price >= 0, f"Price {price}, is not greater than or equals to Zero"
+        assert quantity >= 0, f"Quantity {quantity} is not greater or equals to Zero"
+
+        # Assign to self object
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+        # Action to execute
+        Item.all.append(self)
+
+    def calculate_total_price(self):
+        return self.price * self.quantity
+
+    def apply_discount(self):
+        return self.price * Item.pay_rate
+    # using the class level to access pay rate,
+    # will not permit mutation of the pay rate in the object,
+    # so we use the self.pay rate
+
+    def __repr__(self):
+        return f"Item ('{self.name}, {self.price}, {self.quantity})"
+
+
+item1 = Item("Phone", 100, 1)
+item2 = Item("Laptop", 1000, 3)
+item3 = Item("Cable", 10, 5)
+item4 = Item("Mouse", 50, 5)
+item5 = Item("Keyboard", 175, 5)
+item2.pay_rate = 0.7
+
+for instance in Item.all:
+    print(instance.name)
+
+item1.apply_discount()
+print(item1.price)
+
+print(item1.calculate_total_price())
+print(item2.calculate_total_price())
