@@ -7,7 +7,7 @@ Github: https://www.github.com/Gokegold
 
 Date Created: April 28, 2023
 
-last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 12, 2023],[May 18, 2023]
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 12, 2023], [May 18, 2023], [May 27, 2023]
 
 """
 
@@ -391,3 +391,46 @@ patient_2 = CheckUp("TOl", 182, 72)
 
 print(patient_2.patient_pressure())
 
+# QUESTION @
+
+"""
+Create a Car class with two instance attributes:
+
+.color, which stores the name of the car’s color as a string
+.mileage, which stores the number of miles on the car as an integer
+Then instantiate two Car objects—a blue car with 20,000 miles and a red car with 30,000 miles—and print out their colors and mileage. Your output should look like this:
+
+The blue car has 20,000 miles.
+The red car has 30,000 miles.
+"""
+
+
+class Car:
+    def __init__(self, name, colour, mileage: int):
+        self.name = name
+        self.mileage = mileage
+        self.colour = colour
+
+    def car_description(self):
+        return f"{self.name}, is {self.colour}, and can travel {self.mileage} miles"
+
+
+car_1 = Car("ModelX","Blue", 20000)
+car_2 = Car("ModelY", "Red", 30000)
+
+print(Car.car_description(car_1))
+print(Car.car_description(car_2))
+
+# OR
+
+class Cars:
+    def __init__(self, color, mileages):
+        self.color = color
+        self.mileage = mileages
+
+
+blue_car = Cars(color="Blue", mileages=20_000)
+red_car = Cars(color="Red", mileages=30_000)
+
+for car in (blue_car, red_car):
+    print(f"The {car.color} car can cover, {car.mileage:,} miles")
