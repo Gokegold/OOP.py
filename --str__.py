@@ -1,3 +1,15 @@
+"""
+OOP_test.py
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: May 27, 2023
+
+last modification:: [May 27, 2023]
+
+"""
 # The __str__ Method
 """
 The str method is a built-in method that returns a string representation of an object.
