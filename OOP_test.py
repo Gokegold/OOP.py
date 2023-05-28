@@ -7,7 +7,7 @@ Github: https://www.github.com/Gokegold
 
 Date Created: April 28, 2023
 
-last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 12, 2023], [May 18, 2023], [May 27, 2023]
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 12, 2023], [May 18, 2023], [May 27, 2023], [May 28, 2023]
 
 """
 
@@ -434,3 +434,62 @@ red_car = Cars(color="Red", mileages=30_000)
 
 for car in (blue_car, red_car):
     print(f"The {car.color} car can cover, {car.mileage:,} miles")
+    
+    
+ # QUESTION
+"""
+Create a GoldenRetriever class that inherits from the Dog class.
+Give the sound argument of GoldenRetriever.speak() a default value of "Bark".
+Use the following code for your parent Dog class:
+"""
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age: float):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+
+class GoldenRetriever(Dog):
+    species = input("ENTER: ")
+
+    def __init__(self, name, age, sounds="Bark"):
+        super().__init__(name, age)
+        self.sounds = sounds
+        # Then super() is used to call the parent class attributes
+        # with the same argument passed
+        # Then a new attribute (sounds) is added
+
+    def sound(self):
+        return f"{self.species}, {self.name}, {self.age}, {self.sounds}"
+
+
+D1 = Dog("Chi", 5)
+D2 = GoldenRetriever("top", 4, "bark")
+
+print(GoldenRetriever.sound(D2))
+
+# OR
+
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age: float):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+class GoldenRetriever(Dog):
+    def speak(self, sound="Bark"):
+        return super().speak(sound)
