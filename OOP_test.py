@@ -493,3 +493,43 @@ class Dog:
 class GoldenRetriever(Dog):
     def speak(self, sound="Bark"):
         return super().speak(sound)
+    
+    
+    
+
+D1 = Dog("Chi", 5)
+D2 = GoldenRetriever("top", 4, "bark")
+
+    # OR
+    
+class Animal:
+species = input("Enter animal Species: ")
+sex = input("Enter animal Sex: ")
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def sounds(self, sound):
+        return f"{self.name} is a {self.species} that makes the {sound} sound"
+
+    def details(self):
+        return f"{self.name}, is a {self.age} years old, {self.sex} {self.species}"
+
+
+class Pet(Animal):
+    sound = input("Enter Pet: ")
+
+    def __init__(self, name, age, colour):
+        super().__init__(name, age)
+        self.colour = colour
+
+    def speak(self):
+        return f"{self.name}, is a {self.species} that {self.sound}"
+
+
+A1 = Animal("Tom", 15)
+A2 = Pet("Oyin", 2, "Blue")
+
+print(Animal.details(A1))
+
