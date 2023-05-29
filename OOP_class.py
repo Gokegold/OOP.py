@@ -317,3 +317,50 @@ fn(numbers=5, colors="blue", fruits="apple")
 # ('colors', 'blue')
 # ('fruits', 'apple')
 
+# Using lambda
+a = 2
+b = 3
+
+maximum = lambda a, b: a if a > b else b
+print(f"{maximum(a, b)} is a maximum")
+
+# using list comprehension
+
+a = 2
+b = 4
+
+x = [a if a > b else b]
+print("maximum number is: ", x)
+
+
+class Person(object):
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+
+    def details(self):
+        print("My name is {}".format(self.name))
+        print("My name is {}".format(self.idnumber))
+
+
+class Employee(Person):
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+
+        Person.__init__(self, name, idnumber)
+
+    def details(self):
+        print("my name is {}".format(self.name))
+        print("my idnumber is {}".format(self.idnumber))
+        print("post: {}".format(self.post))
+
+
+a = Employee("Rahul", 886012, 200000, "INTERN")
+
+a.display()
+a.details()
